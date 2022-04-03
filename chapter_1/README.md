@@ -60,6 +60,10 @@ Using the Ansible Service module.
 ansible mylaptop -i hosts -m service -a "name=apache2 state=started"
 ```
 
+Using the Ansible Get_url module.
+```
+ansible mylaptop -i hosts -m get_url -a "url=http://localhost dest=/tmp/"
+```
 
 
 
