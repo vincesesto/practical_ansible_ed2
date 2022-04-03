@@ -27,7 +27,7 @@ ansible all -i hosts -m shell -a 'echo Ansible is fun'
 
 Using the Ansible Ping module.
 ```
-ansible -i hosts mylaptop -m ping
+ansible mylaptop -i hosts -m ping
 ```
 
 Using the Ansible Setup module
