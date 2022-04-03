@@ -50,6 +50,14 @@ Using the Ansible Apt module.
 ansible -i hosts mylaptop -m apt -a "name=apache2 state=present"
 ```
 
+Using the Ansible Package module.
+```
+ansible -i hosts mylaptop -m package -a "name=apache2 state=present"
+```
+
+
+
+
 
 
 
