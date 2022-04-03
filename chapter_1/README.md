@@ -25,5 +25,16 @@ Running our basic Ansible command but using a hosts inventory file.
 ansible all -i hosts -m shell -a 'echo Ansible is fun'
 ```
 
+Using the Ansible Ping module.
+```
+ansible -i hosts mylaptop -m ping
+```
+
+Using the Ansible Setup module
+```
+ansible mylaptop -i hosts -m setup
+```
+
+
 
 
