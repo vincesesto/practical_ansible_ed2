@@ -45,4 +45,11 @@ Using the Ansible Shell module.
 ansible mylaptop -i hosts -m shell -a "ls -l /tmp/"
 ```
 
+Using the Ansible Apt module.
+```
+ansible -i hosts mylaptop -m apt -a "name=apache2 state=present"
+```
+
+
+
 
