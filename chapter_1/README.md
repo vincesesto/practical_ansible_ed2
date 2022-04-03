@@ -9,3 +9,10 @@ Our very first Ansible command.
 ```
 ansible all -i "localhost," -m shell -a 'echo Ansible is fun'
 ```
+
+Running our first Ansible command over multiple hosts.
+```
+ansible all -i "localhost, 127.0.0.1" -m shell -a 'echo Ansible is fun'
+```
+
+
