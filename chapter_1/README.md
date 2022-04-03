@@ -65,6 +65,13 @@ Using the Ansible Get_url module.
 ansible mylaptop -i hosts -m get_url -a "url=http://localhost dest=/tmp/"
 ```
 
+Using the Ansible File module.
+```
+ansible mylaptop -i hosts -m file -a "path=/tmp/another_test owner=root group=root state=directory"
+```
+
+
+
 
 
 
