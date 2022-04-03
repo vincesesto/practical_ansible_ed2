@@ -20,5 +20,10 @@ Running our first Ansible Playbook.
 ansible-playbook test.yml -i “localhost,”
 ```
 
+Running our basic Ansible command but using a hosts inventory file.
+```
+ansible all -i hosts -m shell -a 'echo Ansible is fun'
+```
+
 
 
