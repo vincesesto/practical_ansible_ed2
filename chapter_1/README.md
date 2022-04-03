@@ -40,3 +40,9 @@ Using the Ansible Git module.
 ansible mylaptop -i hosts -m git -a "repo='https://github.com/vincesesto/markdown-cheatsheet.git' -dest=/tmp/markdown-­cheatsheet/"
 ```
 
+Using the Ansible Shell module.
+```
+ansible mylaptop -i hosts -m shell -a "ls -l /tmp/"
+```
+
+
