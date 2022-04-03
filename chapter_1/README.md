@@ -15,4 +15,10 @@ Running our first Ansible command over multiple hosts.
 ansible all -i "localhost, 127.0.0.1" -m shell -a 'echo Ansible is fun'
 ```
 
+Running our first Ansible Playbook.
+```
+ansible-playbook test.yml -i “localhost,”
+```
+
+
 
