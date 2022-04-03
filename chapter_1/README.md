@@ -47,14 +47,18 @@ ansible mylaptop -i hosts -m shell -a "ls -l /tmp/"
 
 Using the Ansible Apt module.
 ```
-ansible -i hosts mylaptop -m apt -a "name=apache2 state=present"
+ansible mylaptop -i hosts -m apt -a "name=apache2 state=present"
 ```
 
 Using the Ansible Package module.
 ```
-ansible -i hosts mylaptop -m package -a "name=apache2 state=present"
+ansible mylaptop -i hosts -m package -a "name=apache2 state=present"
 ```
 
+Using the Ansible Service module.
+```
+ansible mylaptop -i hosts -m service -a "name=apache2 state=started"
+```
 
 
 
