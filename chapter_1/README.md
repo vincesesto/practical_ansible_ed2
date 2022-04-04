@@ -18,8 +18,6 @@ ansible all -i "localhost, 127.0.0.1" -m shell -a 'echo Ansible is fun'
 Running our first Ansible Playbook.
 ```
 ansible-playbook test.yml -i “localhost,”
-
-localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
 Running our basic Ansible command but using a hosts inventory file.
@@ -60,15 +58,6 @@ ansible mylaptop -i hosts -m apt -a "name=apache2 state=present"
 Using the Ansible Package module.
 ```
 ansible mylaptop -i hosts -m package -a "name=apache2 state=present"
-
-localhost | SUCCESS => {
-    "ansible_facts": {
-        "discovered_interpreter_python": "/usr/bin/python3"
-    },
-    "cache_update_time": 1649059827,
-    "cache_updated": false,
-    "changed": false
-}
 ```
 
 Using the Ansible Service module.
