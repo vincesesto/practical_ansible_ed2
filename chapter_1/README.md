@@ -60,6 +60,15 @@ ansible mylaptop -i hosts -m apt -a "name=apache2 state=present"
 Using the Ansible Package module.
 ```
 ansible mylaptop -i hosts -m package -a "name=apache2 state=present"
+
+localhost | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "cache_update_time": 1649059827,
+    "cache_updated": false,
+    "changed": false
+}
 ```
 
 Using the Ansible Service module.
