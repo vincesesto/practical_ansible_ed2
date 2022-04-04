@@ -86,9 +86,13 @@ Using the Ansible File module.
 ansible mylaptop -i hosts -m file -a "path=/tmp/another_test owner=root group=root state=directory"
 ```
 
+Using the Ansible User module.
+```
+ansible mylaptop -i hosts -m user -a "name=jsmith comment='Jane Smith' state=present"
+```
 
-
-
-
-
+Using the Ansible Find module.
+```
+ansible mylaptop -i hosts -m find -a "path=/var/log age=1w file_type=directory"
+```
 
