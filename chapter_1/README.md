@@ -18,6 +18,8 @@ ansible all -i "localhost, 127.0.0.1" -m shell -a 'echo Ansible is fun'
 Running our first Ansible Playbook.
 ```
 ansible-playbook test.yml -i “localhost,”
+
+localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
 Running our basic Ansible command but using a hosts inventory file.
