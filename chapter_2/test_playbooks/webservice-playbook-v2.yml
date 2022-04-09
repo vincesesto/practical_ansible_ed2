@@ -9,6 +9,15 @@
     - restart apache2
   - name: apache is running (and enable it at boot)
     service: name=apache2 state=started enabled=yes
+  - name: disable pmp_event on apache
+    shell: "a2dismod mpm_event"
+    notify:
+    - restart apache2
+  - name: enable cgi on apache
+    shell: "a2enmod mpm_prefork cgi"
+    notify:
+    - restart apache2
   handlers:
   - name: restart apache2
     service: name=apache2 state=restarted
+
