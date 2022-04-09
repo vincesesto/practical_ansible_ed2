@@ -1,4 +1,4 @@
-@ Chapter 2
+# Chapter 2
 
 Running your playbook for the webserver from the test_playbooks directory.
 ```
