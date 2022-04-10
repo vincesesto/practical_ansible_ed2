@@ -14,3 +14,8 @@ Run the playbook for the database server.
 ```
 ansible-playbook -i hosts dbserver-playbook.yml
 ```
+
+Run the new playbook that will inmport both the dbserver-playbook.yml and webserver-playbook.yml playbooks.
+```
+ansible-playbook -i hosts new-playbook.yml
+```
