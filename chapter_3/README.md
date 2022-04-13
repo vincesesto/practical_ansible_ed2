@@ -5,3 +5,12 @@ Run the new Ansible Playbook set up as a role.
 ansible-playbook -i hosts site.yml
 ```
 
+Run the Ansible Playbook that also uses the Django Playbook.
+```
+ansible-playbook -i hosts site.yml --extra-vars django_app_location=`pwd`
+```
+
+Run the development webserver for Django to test.
+```
+python3 web_app/manage.py runserver 0.0.0.0:8000
+```
