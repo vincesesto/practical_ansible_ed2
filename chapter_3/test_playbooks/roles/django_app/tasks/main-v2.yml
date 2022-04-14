@@ -1,0 +1,23 @@
+---
+- name: install django and make sure it is at the latest version
+  apt: name=python3-django state=present
+- name: check if django app already exists
+  shell: ls -l {{ django_app_location }} | grep -c web_app
+  register: djangostatus
+  failed_when: djangostatus.rc == 2
+- name: create a directory for our django app
+  file: path={{ django_app_location }}/web_app mode=0755 owner=user group=user state=directory
+  when: djangostatus.stdout == "0"
+- name: create your new django app in the web_app directory
+  shell: django-admin startproject web_app {{ django_app_location }}/web_app
+  when: djangostatus.stdout == "0"
+- name: configure your database to use work with django
+  copy: src=settings.py dest={{ django_app_location }}/web_app/web_app/settings.py
+  when: djangostatus.stdout == "0"
+- name: apply a migration into the mysql database
+  shell: python3 {{ django_app_location }}/web_app/manage.py migrate
+  when: djangostatus.stdout == "0"
+- name: populate admin with password
+  shell: python3 {{ django_app_location }}/web_app/manage.py shell -c "from django.contrib.auth.models import User; User.objects.filter(username='admin').exists() or User.objects.create_superuser('admin','admin@example.com', 'changeme')"
+  when: djangostatus.stdout == "0"
+  
