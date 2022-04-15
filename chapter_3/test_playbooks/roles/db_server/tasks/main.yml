@@ -24,7 +24,7 @@
     - ::1
     - localhost
 - name: create a new database
-  mysql_db: name=testdb state=present login_user=root login_password="{{ mysql_root_password }}"
+  mysql_db: name=web_app state=present login_user=root login_password="{{ mysql_root_password }}"
 - name: add sample data to database
   copy: src=dump.sql dest=/tmp/dump.sql
 - name: insert sample data into database
