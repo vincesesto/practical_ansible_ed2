@@ -7,7 +7,7 @@
   register: djangostatus
   failed_when: djangostatus.rc == 2
 - name: create a directory for our django app
-  file: path={{ django_app_location }}/web_app mode=0755 owner=user group=user state=directory
+  file: path={{ django_app_location }}/web_app mode=0755 owner=root group=root state=directory
   when: djangostatus.stdout == "0"
 - name: create your new django app in the web_app directory
   shell: django-admin startproject web_app {{ django_app_location }}/web_app
