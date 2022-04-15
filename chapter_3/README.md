@@ -14,3 +14,8 @@ Run the development webserver for Django to test.
 ```
 python3 web_app/manage.py runserver 0.0.0.0:8000
 ```
+
+List all of the tags in a playbook.
+```
+ansible-playbook -i hosts site.yml -e django_app_location=`pwd` --list-tags
+```
