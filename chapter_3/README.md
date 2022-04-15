@@ -19,3 +19,8 @@ List all of the tags in a playbook.
 ```
 ansible-playbook -i hosts site.yml -e django_app_location=`pwd` --list-tags
 ```
+
+Run you playbook using a specific tag.
+```
+ansible-playbook -i hosts site.yml -e django_app_location=`pwd` --tags deploy_database_only
+```
