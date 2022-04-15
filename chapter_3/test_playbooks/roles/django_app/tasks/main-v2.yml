@@ -1,6 +1,7 @@
 ---
 - name: install django and make sure it is at the latest version
   apt: name=python3-django state=present
+  tags: django_alive
 - name: check if django app already exists
   shell: ls -l {{ django_app_location }} | grep -c web_app
   register: djangostatus
@@ -20,4 +21,4 @@
 - name: populate admin with password
   shell: python3 {{ django_app_location }}/web_app/manage.py shell -c "from django.contrib.auth.models import User; User.objects.filter(username='admin').exists() or User.objects.create_superuser('admin','admin@example.com', 'changeme')"
   when: djangostatus.stdout == "0"
-  
+ 
