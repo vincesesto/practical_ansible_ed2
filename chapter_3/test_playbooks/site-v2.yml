@@ -4,4 +4,5 @@
     - web_server
     - role: db_server
       tags: ['deploy_database_only']
-    - django_app
+    - role: django_app
+      tags: ['always']
