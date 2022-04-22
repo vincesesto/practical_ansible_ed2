@@ -1,0 +1,6 @@
+# File name requirements.yml
+
+# Install from Ansible Galaxy
+- src: SimpliField.users
+
+  name: supersecretrole
