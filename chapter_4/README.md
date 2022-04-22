@@ -52,5 +52,8 @@ To see if you currently have any Ansible Galaxy roles on your system using the l
 ```
 ansible-galaxy list
 ```
-
+This is the url for the Ansible Galaxy login page.
+```
+https://galaxy.ansible.com/login
+```
 
