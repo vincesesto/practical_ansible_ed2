@@ -73,6 +73,6 @@ ansible-galaxy install SimpliField.users --roles-path roles/
 ansible-galaxy remove SimpliField.users --roles-path roles/
 
 
-
+ansible-galaxy install -r requirements.yml
 
 
