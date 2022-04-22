@@ -57,3 +57,22 @@ This is the url for the Ansible Galaxy login page.
 https://galaxy.ansible.com/login
 ```
 
+
+
+
+ansible-galaxy login
+
+
+
+
+ansible-galaxy install SimpliField.users --roles-path roles/
+
+
+
+
+
+
+
+
+
+
