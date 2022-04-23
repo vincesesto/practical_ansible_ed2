@@ -79,3 +79,9 @@ ansible-galaxy init test_role
 
 
 
+ansible-galaxy init –-role-skeleton=test_role test_skeleton_role
+
+
+
+
+
