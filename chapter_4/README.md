@@ -56,23 +56,26 @@ This is the url for the Ansible Galaxy login page.
 ```
 https://galaxy.ansible.com/login
 ```
-
-
-
-
+Log in to Ansible Galazy from the command line.
+```
 ansible-galaxy login
-
-
-
-
+```
+Install a role from Ansible Galaxy and use the --roles-path option to install in a specific directory.
+```
 ansible-galaxy install SimpliField.users --roles-path roles/
-
-
-
-
+```
+Delete a role installed from Ansible Galaxy.
+```
 ansible-galaxy remove SimpliField.users --roles-path roles/
-
-
+```
+Install roles from Ansible Galaxy using a requirements file.
+```
 ansible-galaxy install -r requirements.yml
+```
+Create your own role using the ansible-galaxy command.
+```
+ansible-galaxy init test_role
+```
+
 
 
