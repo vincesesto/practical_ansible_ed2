@@ -1,0 +1,6 @@
+---
+- hosts: webserver
+  roles:
+    - web_server
+    - db_server
+    - django_app
