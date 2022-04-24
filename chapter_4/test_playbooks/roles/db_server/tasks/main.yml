@@ -1,4 +1,6 @@
 ---
+- name: load the variables for this environment
+  include_vars: "{{ env }}_environment.yml"
 - name: install mysql and python-myslqdb
   apt: name={{ item }} update_cache=yes cache_valid_time=3600 state=present
   with_items:
