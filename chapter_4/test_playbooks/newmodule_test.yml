@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  tasks:
+  - name: testing our new module
+    hello_module:
+    register: result
+  - debug: var=result
+  - name: testing our second module
+    os_type:
+    register: result
+  - debug: var=result
