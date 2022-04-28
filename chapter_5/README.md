@@ -13,3 +13,7 @@ https://console.aws.amazon.com/iam/home
 
 
 
+Use SSH to connect to your running EC2 server.
+```
+ssh -i splunkserver.pem ec2-user@<public_ip_address>
+```
