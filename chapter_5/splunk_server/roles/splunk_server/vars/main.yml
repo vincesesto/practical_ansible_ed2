@@ -2,5 +2,5 @@
 ec2_sg_name: "AnsibleSecurityGroup"
 ec2_region: "ap-southeast-2"
 ec2_instance_type: "t2.micro"
-ec2_image: "ami-0099823645f06b6a1"
+ec2_image: "ami-0d6fb2916ee0ab9fe"
 ec2_keypair: "ansible-answers-key"
