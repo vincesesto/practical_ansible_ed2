@@ -8,3 +8,13 @@ sudo -u splunk /opt/splunk/bin/splunk start  --answer-yes --no-prompt --accept-l
 {% for item in userlist %}
   sudo -u splunk /opt/splunk/bin/splunk add user {{ item }} -role admin -auth admin:{{ admin_password }}
 {% endfor %}
+
+sudo yum update -y
+sudo yum install git python3-pip -y
+sudo pip3 install ansible
+
+sudo /usr/local/bin/ansible-pull -U https://github.com/vincesesto/testsplunkapp -i hosts
+
+sudo /opt/splunk/bin/splunk enable boot-start
+
+sudo -u splunk /opt/splunk/bin/splunk restart
