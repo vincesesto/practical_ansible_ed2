@@ -1,2 +1,6 @@
 ---
-# vars file for splunk_cloud
+aws_region: "ap-southeast-2"
+aws_instance_type: "t2.micro"
+aws_image: "ami-3d10b05f"
+aws_keypair: "ansible-answers-key"
+aws_ssh_location: "0.0.0.0/0"
