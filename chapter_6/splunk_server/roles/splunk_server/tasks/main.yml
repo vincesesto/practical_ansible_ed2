@@ -31,7 +31,7 @@
     region: "{{ ec2_region }}"
     keypair: "{{ ec2_keypair }}"
     count: 1
-    user_data: "{{ lookup('file', 'user_data.sh') }}"
+    user_data: "{{ lookup('template', 'user_data.j2') }}"
   register: ec2
 
 - name: wait for SSH to come up
