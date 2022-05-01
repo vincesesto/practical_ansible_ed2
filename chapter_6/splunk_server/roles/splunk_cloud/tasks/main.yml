@@ -1,2 +1,16 @@
 ---
-# tasks file for splunk_cloud
+- name: start splunk cloudformation stack
+  cloudformation:
+    stack_name: "ProdSplunkStack"
+    state: "present"
+    region: "{{ aws_region }}"
+    template: "roles/splunk_cloud/files/splunk-stack.yml"
+    template_parameters:
+      KeyName: "{{ aws_keypair }}"
+      InstanceType: "{{ aws_instance_type }}"
+      SSHLocation: "{{ aws_ssh_location }}"
+      AWSAMI: "{{ aws_image }}"
+    tags:
+      env: "Production"
+      service: "Splunk"
+  register: production_splunk_stack
