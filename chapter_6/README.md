@@ -14,3 +14,7 @@ ansible-playbook -i hosts server_deploy.yml --ask-vault-pass
 
 
 
+Delete a CloudFormation Stack using the Ansible Module.
+```
+ansible localhost -m cloudformation -a "stack_name=ProdSplunkStack region=ap-southeast-2 state=absent"
+```
