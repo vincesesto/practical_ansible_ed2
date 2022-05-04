@@ -14,3 +14,10 @@
       env: "Production"
       service: "Splunk"
   register: production_splunk_stack
+
+- debug:
+    var: production_splunk_stack
+    verbosity: 2
+
+- debug:
+    msg: "IP Address Value {{ production_splunk_stack.stack_outputs.PublicIP }}"
