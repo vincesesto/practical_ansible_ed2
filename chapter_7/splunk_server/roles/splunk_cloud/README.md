@@ -12,7 +12,12 @@ You also need to install boto to allow the modules specific for AWS to be run by
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+The variables specific for this role are in the vars/main.yml file and are explained below:
+* aws_region: The AWS region you want to install your Splunk server into.
+* aws_instance_type: The AWS EC2 instance size.
+* aws_image: The AMI identitification number of the Splunk server to be used.
+* aws_keypair: Use a valid key pair to be able to SSH to the server.
+* aws_ssh_location: The IP range the server will be able to be SSH'd to.
 
 Dependencies
 ------------
