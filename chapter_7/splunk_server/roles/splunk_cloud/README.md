@@ -1,12 +1,13 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+This role deploys your Splunk Server AMI onto a CloudFormation Stack into the Amazon Cloud.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+You need to have a valid AWS account an have your AWS Access and Security keys availble on your system.
+You also need to install boto to allow the modules specific for AWS to be run by Ansible.
 
 Role Variables
 --------------
