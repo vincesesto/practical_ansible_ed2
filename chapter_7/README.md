@@ -24,9 +24,19 @@ ansible-playbook -i hosts cloudformation_deploy.yml --step
 ```
 
 ## Ansible Lint
-
-
+Check the version of Ansible Lint that is installed on your system.
+```
 ansible-lint --version
-
-
+```
+Run the Ansible Lint command over a speciic playbook.
+```
 ansible-lint server_deploy.yml -v
+```
+Using Ansible Lint with a specific rules directory, using the -r option.
+```
+ansible-lint server_deploy.yml -r <rules_directory>
+```
+Using Ansible Lint with a specific config file, using the -c option.
+```
+ansible-lint server_deploy.yml -c <config_file>
+```
