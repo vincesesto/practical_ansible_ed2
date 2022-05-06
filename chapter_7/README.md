@@ -18,7 +18,10 @@ Using the --start-at-taks option to start at a ddifferent taks of your Ansible p
 ```
 ansible-playbook -i hosts cloudformation_deploy.yml  --start-at-task="<task_name>"
 ```
-
+Using the --step option to step through your Ansible playbook.
+```
+ansible-playbook -i hosts cloudformation_deploy.yml --step
+```
 
 
 
