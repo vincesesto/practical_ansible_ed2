@@ -13,6 +13,13 @@ Use the ec2_facts Ansible module to specifically gather details for AWS EC2 inst
 ansible all -i "ec2-user@<public_ip_address>," -m ec2_facts  --key-file "<your_key_file>"
 ```
 
+## Troubleshooting Asible Playbooks
+Using the --start-at-taks option to start at a ddifferent taks of your Ansible playbook.
+```
+ansible-playbook -i hosts cloudformation_deploy.yml  --start-at-task="<task_name>"
+```
+
+
 
 
 
