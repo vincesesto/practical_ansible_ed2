@@ -1,0 +1,9 @@
+---
+exclude_paths:
+  - roles/
+parseable: true
+quiet: true
+rulesdir:
+  - test_rules/
+use_default_rules: true
+verbosity: 1
