@@ -23,6 +23,10 @@ Using the --step option to step through your Ansible playbook.
 ansible-playbook -i hosts cloudformation_deploy.yml --step
 ```
 
+## Ansible Lint
 
 
+ansible-lint --version
 
+
+ansible-lint server_deploy.yml -v
