@@ -26,6 +26,10 @@ Using the --check option with Ansible.
 ```
 ansible-playbook -i hosts server_deploy.yml --check  
 ```
+Using the Ansible --syntax-check option on your playbook.
+```
+ansible-playbook -i hosts cloudformation_deploy.yml --syntax-check -v
+```
 
 ## Ansible Lint
 Check the version of Ansible Lint that is installed on your system.
