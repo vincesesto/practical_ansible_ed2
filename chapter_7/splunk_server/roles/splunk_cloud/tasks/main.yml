@@ -10,6 +10,7 @@
       InstanceType: "{{ aws_instance_type }}"
       SSHLocation: "{{ aws_ssh_location }}"
       AWSAMI: "{{ aws_image }}"
+    check_mode: no
     tags:
       env: "Production"
       service: "Splunk"
