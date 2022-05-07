@@ -13,7 +13,7 @@ Use the ec2_facts Ansible module to specifically gather details for AWS EC2 inst
 ansible all -i "ec2-user@<public_ip_address>," -m ec2_facts  --key-file "<your_key_file>"
 ```
 
-## Troubleshooting Asible Playbooks
+## Troubleshooting Ansible Playbooks
 Using the --start-at-taks option to start at a ddifferent taks of your Ansible playbook.
 ```
 ansible-playbook -i hosts cloudformation_deploy.yml  --start-at-task="<task_name>"
@@ -21,6 +21,10 @@ ansible-playbook -i hosts cloudformation_deploy.yml  --start-at-task="<task_name
 Using the --step option to step through your Ansible playbook.
 ```
 ansible-playbook -i hosts cloudformation_deploy.yml --step
+```
+Using the --check option with Ansible.
+```
+ansible-playbook -i hosts server_deploy.yml --check  
 ```
 
 ## Ansible Lint
@@ -39,4 +43,8 @@ ansible-lint server_deploy.yml -r <rules_directory>
 Using Ansible Lint with a specific config file, using the -c option.
 ```
 ansible-lint server_deploy.yml -c <config_file>
+```
+Using Ansible lint to display all the tasks going to be run by the playbook.
+```
+ansible-playbook -i hosts server_deploy.yml --list-tasks
 ```
