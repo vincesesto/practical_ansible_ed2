@@ -7,4 +7,4 @@
   - splunk_cloud
   tasks:
   - debug:
-    msg: "Production Server Public IP Address {{  splunk_public_ip }}"
+      msg: "Production Server Public IP Address {{  splunk_public_ip }}"
