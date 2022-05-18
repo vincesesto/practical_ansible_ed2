@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e -x
+wget -O splunk-8.2.6-a6fe1ee8894b-linux-2.6-x86_64.rpm "https://download.splunk.com/products/splunk/releases/8.2.6/linux/splunk-8.2.6-a6fe1ee8894b-linux-2.6-x86_64.rpm"
+rpm -i splunk-8.2.6-a6fe1ee8894b-linux-2.6-x86_64.rpm
+sleep 30
+sudo -u splunk /opt/splunk/bin/splunk start  --answer-yes --no-prompt --accept-license  --seed-passwd {{ admin_password }}
+
+{% for item in userlist %}
+  sudo -u splunk /opt/splunk/bin/splunk add user {{ item }} -role admin -auth admin:{{ admin_password }}
+{% endfor %}
