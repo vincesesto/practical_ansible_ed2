@@ -16,26 +16,27 @@ If your role already exists, create Molecule a scenario.
 ```
 molecule init scenario 
 ```
-
 Set up a provisioner for Molecule.
+```
 molecule create 
-
-
-Prepare a Docker inatance ready for testing
+```
+Prepare a Docker inatance ready for testing.
+```
 molecule create
-
-Check instances are available and ready
+```
+Check instances are available and ready.
+```
 molecule list
-
-
-Run tests over a provisioned image
+```
+Run tests over a provisioned image.
+```
 molecule converge
-
-
-Login directly to an image that has been provisioned
+```
+Login directly to an image that has been provisioned.
+```
 molecule login
-
-
-
+```
+Run all the Molecule testing from start to finish.
+```
 molecule test
- 
+```
