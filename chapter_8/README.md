@@ -69,6 +69,37 @@ verifier:
 
 
 
+molecule create
+INFO     default scenario test matrix: dependency, create, prepare
+INFO     Performing prerun...
+INFO     Set ANSIBLE_LIBRARY=/home/vincesesto/.cache/ansible-compat/88d782/modules:/home/vincesesto/.ansible/plugins/modules:/usr/share/ansible/plugins/modules
+INFO     Set ANSIBLE_COLLECTIONS_PATH=/home/vincesesto/.cache/ansible-compat/88d782/collections:/home/vincesesto/.ansible/collections:/usr/share/ansible/collections
+INFO     Set ANSIBLE_ROLES_PATH=/home/vincesesto/.cache/ansible-compat/88d782/roles:/home/vincesesto/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles
+INFO     Using /home/vincesesto/.ansible/roles/vincesesto.test_role symlink to current repository in order to enable Ansible to find the role using its expected full name.
+INFO     Running default > dependency
+WARNING  Skipping, missing the requirements file.
+WARNING  Skipping, missing the requirements file.
+INFO     Running default > create
+
+PLAY [Create] ******************************************************************
+
+TASK [Populate instance config dict] *******************************************
+skipping: [localhost]
+
+TASK [Convert instance config dict to a list] **********************************
+skipping: [localhost]
+
+TASK [Dump instance config] ****************************************************
+skipping: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=0    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
+
+INFO     Running default > prepare
+WARNING  Skipping, prepare playbook not configured.
+
+
+
 ```
 If your role already exists, create Molecule a scenario.
 ```
@@ -85,6 +116,18 @@ molecule create
 Check instances are available and ready.
 ```
 molecule list
+
+
+molecule list
+INFO     Running default > list
+                ╷             ╷                  ╷               ╷         ╷            
+  Instance Name │ Driver Name │ Provisioner Name │ Scenario Name │ Created │ Converged  
+╶───────────────┼─────────────┼──────────────────┼───────────────┼─────────┼───────────╴
+  test_role     │ delegated   │ ansible          │ default       │ true    │ false      
+
+
+
+
 ```
 Run tests over a provisioned image.
 ```
