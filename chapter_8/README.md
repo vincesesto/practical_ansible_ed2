@@ -7,6 +7,11 @@ pip3 install molecule docker-py testinfra
 Check the Molecule version you are running on your system.
 ```
 molecule --version
+
+molecule 3.6.1 using python 3.9 
+    ansible:2.10.8
+    delegated:3.6.1 from molecule
+
 ```
 Create a new Ansible role using the Molecule init command.
 ```
