@@ -54,6 +54,21 @@ test_role/
 8 directories, 14 files
 
 
+cat test_role/molecule/default/molecule.yml 
+---
+dependency:
+  name: galaxy
+driver:
+  name: delegated
+platforms:
+  - name: instance
+provisioner:
+  name: ansible
+verifier:
+  name: ansible
+
+
+
 ```
 If your role already exists, create Molecule a scenario.
 ```
