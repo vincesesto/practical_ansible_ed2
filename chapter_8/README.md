@@ -16,6 +16,44 @@ molecule 3.6.1 using python 3.9
 Create a new Ansible role using the Molecule init command.
 ```
 molecule init role test_role
+
+molecule init role vincesesto.test_role
+INFO     Initializing new role test_role...
+No config file found; using defaults
+- Role test_role was created successfully
+[WARNING]: No inventory was parsed, only implicit localhost is available
+localhost | CHANGED => {"backup": "","changed": true,"msg": "line added"}
+INFO     Initialized role in /home/vincesesto/practical_ansible_ed2/chapter_8/splunk_server/roles/test_role successfully.
+
+
+tree test_role/
+test_role/
+├── defaults
+│   └── main.yml
+├── handlers
+│   └── main.yml
+├── meta
+│   └── main.yml
+├── molecule
+│   └── default
+│       ├── converge.yml
+│       ├── create.yml
+│       ├── destroy.yml
+│       ├── INSTALL.rst
+│       ├── molecule.yml
+│       └── verify.yml
+├── README.md
+├── tasks
+│   └── main.yml
+├── tests
+│   ├── inventory
+│   └── test.yml
+└── vars
+    └── main.yml
+
+8 directories, 14 files
+
+
 ```
 If your role already exists, create Molecule a scenario.
 ```
