@@ -2,10 +2,7 @@
 
 Use pip3 to install Molecule and supporting applications.
 ```
-pip3 install molecule docker-py testinfra
-
 sudo pip3 install molecule[lint,docker]
-
 ```
 Check the Molecule version you are running on your system.
 ```
