@@ -30,18 +30,6 @@ molecule create
 Check instances are available and ready.
 ```
 molecule list
-
-
-molecule list
-INFO     Running default > list
-                ╷             ╷                  ╷               ╷         ╷            
-  Instance Name │ Driver Name │ Provisioner Name │ Scenario Name │ Created │ Converged  
-╶───────────────┼─────────────┼──────────────────┼───────────────┼─────────┼───────────╴
-  test_role     │ delegated   │ ansible          │ default       │ true    │ false      
-
-
-
-
 ```
 Run tests over a provisioned image.
 ```
