@@ -1,0 +1,17 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: ec2
+platforms:
+  - name: instance
+    image_owner: "137112412989"
+    image_name: amzn2-ami-kernel-5.10-hvm-2.0.20220426.0-x86_64-gp2
+    instance_type: t2.micro
+    vpc_subnet_id: subnet-c2ac34b4
+    tags:
+      Name: molecule_instance
+provisioner:
+  name: ansible
+verifier:
+  name: ansible
