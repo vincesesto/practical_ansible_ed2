@@ -1,7 +1,4 @@
 ---
-- name: install boto
-  shell: "/usr/bin/pip3 install boto boto3 awscli"
-
 - name: create the host security group
   ec2_group:
     name: "{{ ec2_sg_name }}"
