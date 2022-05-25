@@ -26,7 +26,7 @@ jobs:
           command: cd /home/circleci/project/chapter_8/splunk_server/roles/test_role; ls -l; pwd; whoami
       - run:
           name: Run molecule
-          command: molecule test
+          command: molecule create
 
 
 # Invoke jobs via workflows
