@@ -17,7 +17,7 @@ jobs:
       - checkout
       - run:
           name: "Update and install"
-          command: pip3 install ansible==2.10 molecule pytest-testinfra
+          command: pip3 install ansible==2.10 molecule[docker] pytest-testinfra
       - run:
           name: Test versions of apps
           command: molecule --version
