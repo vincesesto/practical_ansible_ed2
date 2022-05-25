@@ -7,5 +7,8 @@ platforms:
   - name: test_role
 provisioner:
   name: ansible
+  inventory:
+    links:
+      hosts: inventory
 verifier:
   name: testinfra
