@@ -2,7 +2,7 @@
 dependency:
   name: galaxy
 driver:
-  name: delegate
+  name: delegated
 platforms:
   - name: test_role
 provisioner:
