@@ -2,7 +2,7 @@
 dependency:
   name: galaxy
 driver:
-  name: ansible
+  name: delegate
 platforms:
   - name: test_role
 provisioner:
