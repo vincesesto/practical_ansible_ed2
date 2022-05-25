@@ -23,7 +23,7 @@ jobs:
           command: molecule --version
       - run:
           name: Verify working directory
-          command: ls -l; pwd; whoami; uname -a; cat /home/circleci/.cache/molecule/test_role/default/inventory
+          command: ls -l; pwd; whoami; uname -a
       - run: 
           name: Run ansible galaxy to install community docker
           command: ansible-galaxy collection install community.docker
