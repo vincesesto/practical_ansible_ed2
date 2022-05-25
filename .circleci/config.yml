@@ -23,7 +23,7 @@ jobs:
           command: molecule --version
       - run:
           name: Verify working directory
-          command: ls -l, pwd, whoami
+          command: ls -l; pwd; whoami
 
 
 # Invoke jobs via workflows
