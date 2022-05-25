@@ -15,8 +15,15 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+          name: "Update and install"
+          command: "pip3 install ansible==2.10 molecule pytest-testinfra”
+      - run:
+          name: Test versions of apps
+          command: molecule --version
+      - run:
+          name: Verify working directory
+          command: ls -l, pwd, whoami
+
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
