@@ -2,11 +2,9 @@
 dependency:
   name: galaxy
 driver:
-  name: docker
+  name: ansible
 platforms:
   - name: test_role
-    image: quay.io/centos/centos:stream8
-    pre_build_image: true
 provisioner:
   name: ansible
 verifier:
