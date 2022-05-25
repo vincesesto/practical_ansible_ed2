@@ -24,7 +24,10 @@ jobs:
       - run:
           name: Verify working directory
           command: cd /home/circleci/project/chapter_8/splunk_server/roles/test_role; ls -l; pwd; whoami
-      - run:
+      - run: 
+          name: Run ansible-galaxy to install community.docker
+          command: ansible-galaxy collection install community.docker
+      - run: ansible-galaxy collection install community.docker
           name: Run molecule
           command: molecule create
 
