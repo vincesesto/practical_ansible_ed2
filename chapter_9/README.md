@@ -48,6 +48,21 @@ wget https://github.com/ansible/awx/archive/17.1.0.zip
 ansible-playbook -i inventory install.yml
 
 
+[root@ip-172-31-10-109 installer]# docker ps
+CONTAINER ID   IMAGE                COMMAND                  CREATED          STATUS          PORTS                                   NAMES
+97bdf8fd626d   ansible/awx:17.1.0   "/usr/bin/tini -- /u…"   51 seconds ago   Up 47 seconds   8052/tcp                                awx_task
+79d10cf03f46   ansible/awx:17.1.0   "/usr/bin/tini -- /b…"   4 minutes ago    Up 45 seconds   0.0.0.0:80->8052/tcp, :::80->8052/tcp   awx_web
+314c7667d776   redis                "docker-entrypoint.s…"   4 minutes ago    Up 45 seconds   6379/tcp                                awx_redis
+9e9291c7751a   postgres:12          "docker-entrypoint.s…"   4 minutes ago    Up 45 seconds   5432/tcp                                awx_postgres
+[root@ip-172-31-10-109 installer]# docker images
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+postgres      12        bc02a3fd9d66   6 days ago      373MB
+redis         latest    53aa81e8adfa   6 days ago      117MB
+centos        8         5d0da3dc9764   8 months ago    231MB
+ansible/awx   17.1.0    599918776cf2   15 months ago   1.41GB
+
+
+
 ```
 
 
