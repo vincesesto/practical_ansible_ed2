@@ -1,7 +1,7 @@
 # Chapter 9
 
 
-
+```
 wget https://github.com/ansible/awx/archive/17.1.0.zip
 
 
@@ -48,7 +48,7 @@ wget https://github.com/ansible/awx/archive/17.1.0.zip
 ansible-playbook -i inventory install.yml
 
 
-
+```
 
 
 
