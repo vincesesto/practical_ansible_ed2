@@ -21,15 +21,3 @@ Run the ansible playbook in the directory
 ```
 ansible-playbook -i inventory install.yml
 ```
-
-```
-images
-<ansible playbook output on tower >
-<insert creating Job run>
-<insert creating template>
-<insert creating hosts>
-
-```
-
-
-
